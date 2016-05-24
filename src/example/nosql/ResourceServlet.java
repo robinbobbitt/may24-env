@@ -35,6 +35,10 @@ public class ResourceServlet {
 
 	public ResourceServlet() {
 	}
+	
+	static {
+		System.out.println("test: " + System.getenv("MY_ENV_VAR"));
+	}
 
 	@POST
 	public Response create(@QueryParam("id") Long id, @FormParam("name") String name, @FormParam("value") String value)
